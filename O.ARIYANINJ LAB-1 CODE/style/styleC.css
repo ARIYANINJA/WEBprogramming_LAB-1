@@ -1,0 +1,66 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+}
+.item {
+  border: #687291 1px solid;
+  background: #eeeff2;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+}
+.item-1:hover {
+  background: linear-gradient(to right, red, yellow);
+}
+.item-2:hover {
+  background: blue;
+}
+.item-3:hover {
+  opacity: 0.4;
+  transition: 1s;
+  cursor: pointer;
+}
+.item-4 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  opacity: 1;
+  transition: 0.5s;
+  transform: translateZ(0);
+}
+.item-4::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: yellow;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  transition: transform 0.5s ease-out;
+}
+.item-4:hover::before {
+  transform: scaleX(1);
+  cursor: pointer;
+}
+.item-4:hover {
+  cursor: pointer;
+  color: black;
+}
+.item-5:hover {
+  transform: matrix(0.8, -0.5, 0.5, 0.8, 0, 0);
+  transition: 3s;
+  cursor: pointer;
+}
+.item-6:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  cursor: pointer;
+}
